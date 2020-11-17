@@ -1,5 +1,11 @@
 {{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
 <article class="content">
+  {{ with .Resources.ByType "image" }}
+  {{ range . }}
+  {{ .RelPermalink }}
+  {{ end }}
+  {{ end }}
+
   <main>{{- .Content -}}</main>
 </article>
 {{ end }}
