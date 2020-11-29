@@ -1,3 +1,11 @@
+---
+url: how-i-wrote-a-ps5-hunter-bot
+title: How I wrote a PS5 hunter bot
+description: <todo>
+date: 2020-11-28
+tags:
+    - javascript
+----------------
 **@edit 1**
 
 [2020.11.28] [18:17 CET] - First deploy, no email received :(
