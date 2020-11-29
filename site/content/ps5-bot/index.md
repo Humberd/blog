@@ -5,7 +5,8 @@ description: <todo>
 date: 2020-11-28
 tags:
     - javascript
-----------------
+draft: true
+-----------
 **@edit 1**
 
 [2020.11.28] [18:17 CET] - First deploy, no email received :(
