@@ -38,6 +38,7 @@ In order to help me with that I wrote a bot that scraps PS5 product pages of sev
 It's only a change detection bot and not some auto buyer.
 
 Here is a sneak peek of how it looks:
+
 ![ps5 bot demo gif](https://dev-to-uploads.s3.amazonaws.com/i/vmyasz4f9qve1lcromye.gif)
 
 # Research
