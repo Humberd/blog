@@ -1,11 +1,10 @@
 {{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
-<article class="content">
-  {{ with .Resources.ByType "image" }}
-  {{ range . }}
-  {{ .RelPermalink }}
-  {{ end }}
-  {{ end }}
+<article class="post">
 
-  <main>{{- .Content -}}</main>
+  {{ partial "post-title.gohtml" . }}
+
+  <main class="content">
+    {{- .Content -}}
+  </main>
 </article>
 {{ end }}
