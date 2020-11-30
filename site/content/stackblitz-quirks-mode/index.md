@@ -1,5 +1,5 @@
 ---
-url: why-you-should-not-use-stackblitz-to-shopcase-your-app
+url: why-you-should-not-use-stackblitz-to-showcase-your-app
 title: Why you should NOT use StackBlitz to showcase your app
 description: <todo>
 date: 2020-11-05
