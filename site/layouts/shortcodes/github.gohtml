@@ -1,0 +1,14 @@
+{{ $repository := .Get 0 }}
+{{ $author := index (split $repository "/") 0 }}
+{{ $name := index (split $repository "/") 1 }}
+
+<p style="display: flex; align-items: center; font-size: 1.7em;">
+    <img style="display: inline; margin: 0; height: 32px; width: 32px;" src="icons/github-icon.svg" alt="github icon" aria-disabled="true">
+    <a style="padding: 0 10px;" href="https://github.com/{{ $author }}">
+        {{ $author }}
+    </a>
+    <span>/</span>
+    <a style="padding: 0 10px;" href="https://github.com/{{ $author }}/{{ $name }}">
+        {{ $name }}
+    </a>
+</p>

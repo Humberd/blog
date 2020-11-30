@@ -411,7 +411,8 @@ Here is the final result:
 
 The repository:
 
-{% github Humberd/ps5-bot no-readme %}
+{{< github "Humberd/ps5-bot" >}}
+
 
 # Conclusion
 
