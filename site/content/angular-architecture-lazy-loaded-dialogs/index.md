@@ -4,7 +4,11 @@ title: Angular Architecture - Lazy loaded dialogs
 description: How to efficiently lazy load a large amount of dialogs and how to structure an application around them
 date: 2020-11-12
 series:
+    - Angular Architecture
+tags:
     - angular
+    - typescript
+    - javascript
 -------------
 
 In the previous article I wrote about storing context menu action definitions in a scalable way using a Command Pattern (no more 1000 lines `ActionService` 🎉). In the showcase application I used dialogs that were loaded eagerly, which means all the dialog modules are being downloaded to the browser at once despite displaying only some of them most of the time. Let's fix it!

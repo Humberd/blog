@@ -3,6 +3,8 @@ url: building-a-blog-part-1-framework-research
 title: Building a Blog - Part 1 Framework Research
 description: <todo>
 date: 2020-11-14
+series:
+    - Building a Blog
 tags:
     - javascript
 ----------------

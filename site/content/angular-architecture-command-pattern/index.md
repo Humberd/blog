@@ -4,7 +4,7 @@ title: Angular Architecture - How to use Command Pattern to manage large amount 
 description: <todo>
 date: 2020-11-08
 series:
-    - angular
+    - Angular Architecture
 tags:
     - angular
     - typescript
