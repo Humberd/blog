@@ -9,7 +9,7 @@ draft: true
 -----------
 **@edit 1**
 
-[2020.11.28] [18:17 CET] - First deploy, no email received :(
+\[2020.11.28] \[18:17 CET] - First deploy, no email received :(
 
 # Introduction
 
@@ -19,7 +19,7 @@ However, I didn't preorder it, since it turned out to be a gamble. One shop deli
 
 Some online shops offer signing up for a newsletter that would hopefully notify me if there is restock. However, giving my mail to them is equal to receiving huge amount of spam, and the unsubscription doesn't necessarily mean they will delete my email. In the near future the sale will be entirely online.
 
-![newsletter signup form in online shop](https://dev-to-uploads.s3.amazonaws.com/i/a0e6daetw6q4kyrqim8p.png)
+{{< img src="res/media-expert-signup-form.png" alt="media expert newsletter signup form" >}}
 
 Another way to get the console is through people who already bought them. But the prices... They are 2x more expensive (in the shop they cost 2200).
 
