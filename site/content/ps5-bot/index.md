@@ -5,9 +5,12 @@ description: <todo>
 date: 2020-11-28
 tags:
     - javascript
+    - node.js
 draft: true
 -----------
 **@edit 1**
+
+\[2020.11.29] \[23:05 CET] - Time of writing this blog, no email received :(
 
 \[2020.11.28] \[18:17 CET] - First deploy, no email received :(
 

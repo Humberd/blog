@@ -13,7 +13,7 @@
 {{ else }}
     {{ $permaSrc := printf "%s%s" .Page.Permalink $src }}
     <p>
-        <img src="{{ $permaSrc }}" alt="{{ $alt }}">
+        <img src="{{ $permaSrc }}" alt="{{ $alt }}" loading="lazy">
     </p>
 {{ end }}
 
