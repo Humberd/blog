@@ -16,3 +16,27 @@
 		}
 	}
 }
+
+.badge-list {
+	display: flex;
+
+	& > .badge {
+		line-height: 26px;
+		background-color: #3d79e9;
+		color: #ffffff;
+		border-radius: 3px;
+		padding: 0 8px;
+
+		transition: 50ms background-color ease-in-out;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background-color: #5293ff;
+		}
+
+		&:not(:last-child) {
+			margin-right: 4px;
+		}
+	}
+}

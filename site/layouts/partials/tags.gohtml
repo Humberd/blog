@@ -1,0 +1,7 @@
+{{ $tags := . }}
+{{/*  Fix me to be unordered list, currently markdown oferrides inline styles  */}}
+<div class="badge-list" aria-label="badge list">
+    {{ range $tags }}
+        <a class="badge" href="/tags/{{ . }}">{{ . }}</a>
+    {{ end }}
+</div>
