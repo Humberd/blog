@@ -1,0 +1,31 @@
+$height: 64px;
+
+
+.main-header {
+	height: $height;
+	margin-bottom: 16px;
+
+	background-color: #FFFFFF;
+	box-shadow: 0 0 7px -1px #000000;
+
+	display: flex;
+	align-items: center;
+
+	.logo {
+		margin: 0 32px;
+		a {
+			color: #000;
+		}
+	}
+
+	.links {
+		display: flex;
+		align-items: stretch;
+		height: 100%;
+
+		a {
+			padding: 0 24px;
+			line-height: $height;
+		}
+	}
+}
