@@ -1,6 +1,6 @@
 ---
-url: how-i-wrote-a-ps5-hunter-bot
-title: How I wrote a PS5 hunter bot
+url: how-i-wrote-a-ps5-hunter-bot-in-7-hours
+title: How I wrote a PS5 hunter bot in 7 hours
 description: <todo>
 date: 2020-11-28
 tags:
@@ -16,11 +16,11 @@ However, I didn't preorder it, since it turned out to be a gamble. One shop deli
 
 Some online shops offer signing up for a newsletter that would hopefully notify me if there is restock. However, giving my mail to them is equal to receiving huge amount of spam, and the unsubscription doesn't necessarily mean they will delete my email. In the near future the sale will be entirely online.
 
-{{< img src="res/media-expert-signup-form.png" alt="media expert newsletter signup form" >}}
+![media expert newsletter signup form](res/media-expert-signup-form.png)
 
 Another way to get the console is through people who already bought them. But the prices... They are 2x more expensive (in the shop they cost 2200).
 
-{{< img src="res/allegro-ps5-prices.png" alt="allegro ps5 prices listing" >}}
+![allegro ps5 prices listing](res/allegro-ps5-prices.png)
 
 I was really pissed! There are so many people, who bought the console only to resell them right after for the higher price, while there are so many, who want to just enjoy playing the games. Capitalism, right?
 
