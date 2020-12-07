@@ -7,13 +7,8 @@ tags:
     - javascript
     - node.js
 -----------
-**@edit 1**
 
-\[2020.11.29] \[23:05 CET] - Time of writing this blog, no email received :(
-
-\[2020.11.28] \[18:17 CET] - First deploy, no email received :(
-
-# Introduction
+## Introduction
 
 I've never had a gaming console my entire life ([PSP](https://en.wikipedia.org/wiki/PlayStation_Portable) doesn't count). It looks like it's the best time to change it thanks to the recent release of PS5 and Xbox Series X. My eyes are primarly focused on the newest PlayStation due to its exclusive titles, such as: Spiderman, The Last of Us, Uncharted, etc.
 
@@ -29,7 +24,7 @@ Another way to get the console is through people who already bought them. But th
 
 I was really pissed! There are so many people, who bought the console only to resell them right after for the higher price, while there are so many, who want to just enjoy playing the games. Capitalism, right?
 
-# Goal
+## Goal
 
 Fortunately, when I'm pissed I'm also very motivated. It would also be cool to combine it with a valuable skill called programming to achieve the goal:
 
@@ -43,7 +38,7 @@ Here is a sneak peek of how it looks:
 
 {{< img src="res/ps5-bot-demo.gif" alt="ps5 bot demo gif" >}}
 
-# Research
+## Research
 
 The approach I took is basically to fetch the page every 5 minutes and check if there are strings indicating something changed. For example in one case I check for a literal text 'The product is temporarily available' while in another one I check for a characteristic class name.
 
@@ -59,7 +54,7 @@ I've targeted 7 online polish shops. After some research (clicking the site and 
     In `MediaMarkt` we can only see a landing page.
     {{< img src="res/media-markt-shop-example.png" alt="media markt shop with ps5 landing page" >}}
 
-# Site definitions
+## Site definitions
 
 I've written the bot in Node.js using Typescript. The structure of the project looks like this:
 
@@ -140,7 +135,7 @@ export class NeonetDef extends JsonSiteDef<NeonetResponse> {
 }
 ```
 
-# Custom framework
+## Custom framework
 
 If you noticed there are 2 base classes `HtmlSiteDef` and `JsonSiteDef` that both fetch the site and make either a DOM tree of a JSON object. Below is an example of `HtmlSiteDef`.
 
@@ -244,7 +239,7 @@ export abstract class SiteDef {
 }
 ```
 
-# Main loop
+## Main loop
 
 Inside `index.ts` we simply loop the sites lists every 5 minutes.
 
@@ -282,7 +277,7 @@ async function main() {
 main();
 ```
 
-# Sending an email
+## Sending an email
 
 First I thought about writing a mobile app that would send me a custom notification, but the same functionality can be achieved simply by sending an email to my gmail account, which in turn would display a notification on my phone. Cool
 
@@ -359,7 +354,7 @@ It is very simple, it has only 2 methods, one for sending success mail and the o
 
 You can also notice that the bot uses sensitive data, such as: `SENDGRID_API_KEY`, `SENDGRID_MAIL`, `TARGET_MAIL` using environment variables. Nothing is hardcoded.
 
-# Deployment
+## Deployment
 
 I was thinking about setting a pipeline, that would build a Docker image, put it on DockerHub and then deploy it to Kubernetes cluster using Terraform on my RaspberryPi, however, it would be an overkill. I hope this bot would do its job during the next couple of weeks and be forgotten, so the pipeline doesn't need to be fancy.
 
@@ -416,7 +411,7 @@ The repository:
 {{< github "Humberd/ps5-bot" >}}
 
 
-# Conclusion
+## Conclusion
 
 Creation of this bot took me 7 hours:
 
