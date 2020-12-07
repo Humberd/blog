@@ -1,12 +1,20 @@
 {{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
-<article class="post">
+<div class="post-wrapper">
+  <article class="post">
 
-  {{ partial "post-title.gohtml" . }}
+    {{ partial "post-title.gohtml" . }}
 
-  <main class="content">
-    {{- .Content -}}
-  </main>
-</article>
+    <main class="content">
+      {{- .Content -}}
+    </main>
+  </article>
+
+  <aside>
+    <div class="table-of-content">
+      {{ .TableOfContents }}
+    </div>
+  </aside>
+</div>
 
   {{ $script := .Site.Data.webpack.post }}
   {{ with $script.js }}

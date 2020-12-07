@@ -1,6 +1,27 @@
+.post-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+
+	aside {
+		position: relative;
+		margin-top: 54px;
+
+		.table-of-content {
+			position: sticky;
+			top: 64px;
+
+			ul {
+				list-style: none;
+			}
+		}
+	}
+
+
+}
+
 .post {
 	max-width: 750px + 2*16px;
-	margin: auto;
 	padding: 16px;
 
 	.post-title {
@@ -17,6 +38,7 @@
 				text-align: center;
 			}
 		}
+
 		img {
 			display: block;
 			margin: auto;
