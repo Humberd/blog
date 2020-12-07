@@ -1,5 +1,19 @@
 {{ define "main" }}
 
-THIS IS TAXONOMY
+<section class="taxonomies">
+  <h1>
+    {{ .Page.Title }} [{{ len .Data.Terms }}]
+  </h1>
+
+  {{ range .Data.Terms.ByCount }}
+      <ul>
+        <li>
+          <a href="{{ .Page.Permalink }}">
+            {{ .Page.Title }} [{{ len .Page.Pages }}]
+          </a>
+        </li>
+      </ul>
+  {{ end }}
+</section>
 
 {{ end }}
