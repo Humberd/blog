@@ -9,6 +9,14 @@
 	}
 
 	.content {
+		figure {
+			margin: 0;
+
+			& > figcaption {
+				font-style: italic;
+				text-align: center;
+			}
+		}
 		img {
 			display: block;
 			margin: auto;

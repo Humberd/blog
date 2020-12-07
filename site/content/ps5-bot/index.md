@@ -36,7 +36,7 @@ It's only a change detection bot and not some auto buyer.
 
 Here is a sneak peek of how it looks:
 
-{{< img src="res/ps5-bot-demo.gif" alt="ps5 bot demo gif" >}}
+![ps5 bot demo gif](res/ps5-bot-demo.gif)
 
 ## Research
 
@@ -49,17 +49,16 @@ I've targeted 7 online polish shops. After some research (clicking the site and 
 2. **Inconsistent product pages** - Some shops don't event have a PS5 product page yet, so they use a fancy landing page, some have a product page, and one shop doesn't have either, so its only indication is that the search list is empty.
 
     In `Avans` we can only check if there is no PS5 on the list.
-    {{< img src="res/avans-shop-example.png" alt="avans shop with no ps5 in the list" >}}
+    ![avans shop with no ps5 in the list](res/avans-shop-example.png)
 
     In `MediaMarkt` we can only see a landing page.
-    {{< img src="res/media-markt-shop-example.png" alt="media markt shop with ps5 landing page" >}}
+    ![media markt shop with ps5 landing page](res/media-markt-shop-example.png)
 
 ## Site definitions
 
 I've written the bot in Node.js using Typescript. The structure of the project looks like this:
 
-
-{{< img src="res/project-structure.png" alt="project structure of a bot" >}}
+![project structure of a bot](res/project-structure.png)
 
 Every shop has a dedicated class, which allows to adjust some quirks per shop. Each shop definition looks like this:
 
@@ -290,10 +289,10 @@ Integration was super easy. I took me less than 15 minutes to successfully send 
 Sendgrid requires a custom domain to be verified by adding some DNS entries. Luckily I have mine in [Cloudflare](https://www.cloudflare.com/), so it was a piece of cake.
 
 Here is what I had was presented by Sendgrid
-{{< img src="res/sendgrid-dns-records.png" alt="sendgrid dns entries" >}}
+![sendgrid dns entries](res/sendgrid-dns-records.png)
 
 Here is where I put the entries on Cloudflare
-{{< img src="res/cloudflare-dns-records.png" alt="cloudflare dns entries" >}}
+![cloudflare dns entries](res/cloudflare-dns-records.png)
 
 ### 2. Downloading a Node library
 
@@ -350,7 +349,7 @@ export class MailSender {
 
 It is very simple, it has only 2 methods, one for sending success mail and the other for sending an error. The error message also sends a stack trace of the exception, so that I know which part of code broke. Below is the error mail screen.
 
-{{< img src="res/error-mail-screen.png" alt="error mail screen" >}}
+![error mail screen](res/error-mail-screen.png)
 
 You can also notice that the bot uses sensitive data, such as: `SENDGRID_API_KEY`, `SENDGRID_MAIL`, `TARGET_MAIL` using environment variables. Nothing is hardcoded.
 
@@ -404,7 +403,7 @@ docker-compose up -d
 
 Here is the final result:
 
-{{< img src="res/ps5-bot-demo.gif" alt="ps5 bot demo gif" >}}
+![ps5 bot demo gif](res/ps5-bot-demo.gif)
 
 The repository:
 

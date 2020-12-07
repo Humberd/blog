@@ -1,4 +1,4 @@
 <figure>
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"/>
-  <figcaption>{{ .Text }}</figcaption>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text | safeHTML }}"/>
+  <figcaption>{{ .Text | safeHTML }}</figcaption>
 </figure>
