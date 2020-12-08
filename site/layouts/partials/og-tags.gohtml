@@ -11,8 +11,7 @@
         {{ $link := $imageFound.Permalink }}
         {{ if getenv "CONTEXT" }}
             {{ $baseUrl := getenv "URL" }}
-            {{ $baseUrlWithoutEndSlash := substr $baseUrl 0 -1 }}
-            <meta property="og:image" content="{{ printf "%s%s" $baseUrlWithoutEndSlash $link }}"/>
+            <meta property="og:image" content="{{ printf "%s%s" $baseUrl $link }}"/>
         {{ else }}
             <meta property="og:image" content="{{ $link }}"/>
         {{ end }}
