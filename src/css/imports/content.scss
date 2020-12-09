@@ -1,5 +1,5 @@
 $postContent-width: 750px;
-$bannerOffset: 100px;
+$bannerOffset: 110px;
 
 .post-wrapper {
 	.baner {
@@ -30,7 +30,10 @@ $bannerOffset: 100px;
 article.post {
 	$padding: 32px;
 
+	max-width: $postContent-width + 2 * $padding;
 	padding: $padding;
+	margin-top: 5px;
+
 	background-color: var(--background-color--primary);
 
 	header.post-heading {
@@ -39,12 +42,15 @@ article.post {
 			font-size: 2.5em;
 			margin: 0;
 		}
+
+		.post-metadata {
+			margin: 16px 0;
+			font-size: 0.9rem;
+			color: #313131;;
+		}
 	}
 
 	main.content {
-		max-width: $postContent-width;
-		margin: auto;
-
 		hr:first-child {
 			display: none;
 		}

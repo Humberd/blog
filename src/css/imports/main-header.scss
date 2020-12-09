@@ -1,8 +1,5 @@
-$height: 64px;
-
-
 .main-header {
-	height: $height;
+	height: var(--navbar-height);
 
 	background-color: #FFFFFF;
 	box-shadow: 0 0 7px -1px #000000;
@@ -24,7 +21,7 @@ $height: 64px;
 
 		a {
 			padding: 0 24px;
-			line-height: $height;
+			line-height: var(--navbar-height);
 		}
 	}
 }

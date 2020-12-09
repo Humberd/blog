@@ -1,5 +1,12 @@
 <header class="post-heading">
     <h1 class="post-title">{{ .Title }}</h1>
+
     {{ partial "tags.gohtml" .Params.tags }}
+
+    <div class="post-metadata">
+        <time datetime="{{ .Date.Unix }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        <span>·</span>
+        <span>{{ .ReadingTime }} min read</span>
+    </div>
 
 </header>
