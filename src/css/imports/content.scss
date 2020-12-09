@@ -30,6 +30,20 @@
 	}
 
 	.content {
+		hr:first-child {
+			display: none;
+		}
+
+		h1, h2, h3, h4 {
+			& > a.header-link {
+				color: transparent;
+
+				& > svg {
+					vertical-align: middle;
+				}
+			}
+		}
+
 		figure {
 			margin: 0;
 
