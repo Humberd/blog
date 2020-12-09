@@ -1,0 +1,5 @@
+{{ $banner := index .Params.images 0 }}
+{{ if $banner }}
+    {{ $imageFound := $.Resources.GetMatch $banner }}
+    <div class="baner" style="background-image: url('{{ $imageFound | urlize }}')"></div>
+{{ end }}

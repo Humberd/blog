@@ -1,24 +1,28 @@
 {{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
 <div class="post-wrapper">
-  <article class="post">
+  {{ partial "post-banner.gohtml" . }}
 
-    {{ partial "post-title.gohtml" . }}
+  <div style="display: flex; justify-content: center; margin: auto;">
+    <article class="post">
 
-    <main class="content">
-      {{- .Content -}}
-    </main>
-  </article>
+      {{ partial "post-title.gohtml" . }}
 
-  <aside>
-    <div class="table-of-content">
-      {{ .TableOfContents }}
-    </div>
-  </aside>
+      <main class="content">
+        {{- .Content -}}
+      </main>
+    </article>
+
+    <aside>
+      <div class="table-of-content">
+        {{ .TableOfContents }}
+      </div>
+    </aside>
+  </div>
 </div>
 
-  {{ $script := .Site.Data.webpack.post }}
-  {{ with $script.js }}
-    <script src="{{ relURL . }}"></script>
-  {{ end }}
+{{ $script := .Site.Data.webpack.post }}
+{{ with $script.js }}
+<script src="{{ relURL . }}"></script>
+{{ end }}
 
 {{ end }}
