@@ -1,7 +1,9 @@
 ---
 url: how-to-statically-type-this-for-a-regular-function-in-typescript
 title: How to statically type 'this' for a regular function in TypeScript
-description: <todo>
+description: A cool trick to know when calling a regular function with a `call` or `apply` methods.
+images:
+    - res/_banner_.png
 date: 2020-11-09
 tags:
     - typescript
@@ -31,7 +33,9 @@ printCatName(cat); // This is Bob
 
 Simply speaking we get the expected result.
 
-But a function can consume data another way using `this` context:
+## Problem
+
+However, a function can consume data another way using `this` context:
 
 ```typescript
 function printCatName() {
@@ -43,7 +47,9 @@ printCatName.apply(bobTheCat); // This is Bob
 
 This works exactly the same as the previous way. However, we now lost static typing for `this` variable:
 
-![no static typing for 'this' variable](https://dev-to-uploads.s3.amazonaws.com/i/3z39wex3c2u1cdkoawth.png)
+![No static typing for 'this' variable](res/not-static-typing-for-this.png)
+
+## Solution
 
 Fortunately, TypeScript has us covered. We can write a new function the following way:
 
@@ -58,7 +64,9 @@ printCatName.apply(bobTheCat); // This is Bob
 
 And once again we have the same result, but this time we get all the benefits from static typing. Yay!
 
-![static typing works for 'this' function](https://dev-to-uploads.s3.amazonaws.com/i/oodzol2bisxq093izig5.png)
+![Static typing works for 'this' function](res/static-typing-works-for-this.png)
+
+## `this` as a parameter?
 
 You might ask what would happen if invoke a function without `apply()`? The function has `this` parameter, so we probably need to provide is as well, right?
 
@@ -79,7 +87,7 @@ index.ts:13:14 - error TS2554: Expected 0 arguments, but got 1.
                 ~~~~~~~~~
 ```
 
-This is why I described `this` as a "pseudo parameter, because it might look it's a parameter, but in fact it is just a hint to TypeScript.
+This is why I described `this` as a pseudo parameter, because it might look it's a parameter, but in fact it is just a hint to TypeScript.
 
 See you around.
 
