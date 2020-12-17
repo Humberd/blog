@@ -1,12 +1,23 @@
 <header class="post-heading">
     <h1 class="post-title">{{ .Title }}</h1>
 
-    {{ partial "tags.gohtml" .Params.tags }}
+    {{ partial "tags.gohtml" (.GetTerms "tags") }}
 
-    <div class="post-metadata">
-        <time datetime="{{ .Date.Unix }}">{{ .Date.Format "02 Jan 2006" }}</time>
-        <span>·</span>
-        <span>{{ .ReadingTime }} min read</span>
-    </div>
+    <section class="post-metadata">
+        <div class="timing">
+            <time datetime="{{ .Date.Unix }}">{{ .Date.Format "02 Jan 2006" }}</time>
+            <span>·</span>
+            <span>{{ .ReadingTime }} min read</span>
+        </div>
+
+        {{ if (.GetTerms "series") }}
+            {{ $firstSeries := index (.GetTerms "series") 0}}
+            <div>
+                <span>Part of series: </span>
+                <a href="{{ $firstSeries.Permalink }}">{{ $firstSeries.LinkTitle }}</a>
+            </div>
+        {{ end }}
+    </section>
+
 
 </header>

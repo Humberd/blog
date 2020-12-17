@@ -45,8 +45,15 @@ article.post {
 
 		.post-metadata {
 			margin: 16px 0;
-			font-size: 0.9rem;
-			color: #313131;;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			& > .timing {
+				font-size: 0.9rem;
+				color: #313131;;
+			}
 		}
 	}
 
@@ -67,6 +74,13 @@ article.post {
 
 		figure {
 			margin: 0;
+		}
+
+		figure.markdown-image {
+			& > img {
+				box-shadow: 0 2px 5px 0 #474747;
+				margin-bottom: 4px;
+			}
 
 			& > figcaption {
 				font-style: italic;

@@ -2,6 +2,6 @@
 {{/*  Fix me to be unordered list, currently markdown overrides inline styles  */}}
 <section class="badge-list" aria-label="badge list">
     {{ range $tags }}
-        <a class="badge" href="/tags/{{ . | safeURL }}/">{{ . | safeHTML }}</a>
+        <a class="badge" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
     {{ end }}
 </section>
