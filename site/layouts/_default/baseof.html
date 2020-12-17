@@ -19,7 +19,7 @@
 
 {{ block "main" . }}{{end}}
 
-{{ block "footer" . }}{{ partial "footer.gohtml" . }}{{end}}
+{{ block "footer" . }}{{ partial "footer-main.gohtml" . }}{{end}}
 
 {{ $script := .Site.Data.webpack.main }}
 {{ with $script.js }}

@@ -1,0 +1,32 @@
+.main-footer {
+	height: 128px;
+	background-color: #ececec;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	ul.links {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		& > li {
+			height: 32px;
+			width: 32px;
+			margin: 0 8px;
+		}
+
+		a {
+			height: 32px;
+			width: 32px;
+			display: inline-block;
+		}
+
+		img {
+			height: 32px;
+			width: 32px;
+		}
+	}
+}
