@@ -10,6 +10,11 @@ body {
   background-color: var(--background-color--primary);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   box-sizing: border-box;
 }
