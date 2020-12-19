@@ -1,7 +1,11 @@
-{{ if .Params.images }}
-    {{ $banner := index .Params.images 0 }}
-    {{ if $banner }}
-        {{ $imageFound := $.Resources.GetMatch $banner }}
-        <div class="baner" style="background-image: url('{{ $imageFound | urlize }}')"></div>
+{{ with .Params.banners }}
+    {{ with .wide}}
+        {{ $imageFound := $.Resources.GetMatch . }}
+        <div class="baner" style="background-image: url('{{ $imageFound.Permalink }}')"></div>
+    {{ else }}
+        <div class="baner" style="background-image: url('{{ "/banner-placeholder.jpg" }}')"></div>
     {{ end }}
+
+{{ else }}
+    <div class="baner" style="background-image: url('{{ "/banner-placeholder.jpg" }}')"></div>
 {{ end }}

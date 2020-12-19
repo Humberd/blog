@@ -1,0 +1,32 @@
+main.landing-page {
+    max-width: 1200px;
+    padding: 0 32px;
+    margin: auto;
+
+    .articles-list {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        grid-gap: 100px;
+
+        .article-preview {
+            display: flex;
+            flex-direction: column;
+
+            .timing {
+                font-size: 0.9rem;
+            }
+
+            .title {
+                margin-top: 10px;
+            }
+
+            .banner {
+                display: block;
+                width: 100%;
+                height: 300px;
+                margin-bottom: 25px;
+            }
+
+        }
+    }
+}

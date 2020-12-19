@@ -5,6 +5,9 @@ description: How to efficiently handle lazy loading of a large amount of dialogs
 date: 2020-11-12
 images:
     - res/_banner_.png
+banners:
+    wide: res/_banner_.png
+    narrow: res/_banner_.png
 series:
     - Angular Architecture
 tags:

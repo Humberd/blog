@@ -1,0 +1,17 @@
+{{ with .Params.banners }}
+    {{ with .narrow }}
+        {{ $imageFound := $.Resources.GetMatch . }}
+        {{ $.Scratch.Set "url" ($imageFound.Permalink) }}
+    {{ end }}
+{{ end }}
+
+
+{{ $url := $.Scratch.Get "url" | default "/banner-placeholder.jpg" }}
+<a href="{{ .Permalink }}">
+    <img
+            class="banner"
+            src="{{ $url }}"
+            alt="article banner"
+            aria-hidden="true"
+    >
+</a>

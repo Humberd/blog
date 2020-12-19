@@ -1,9 +1,5 @@
 {{ define "main" }}
 
-{{ range .Pages }}
-<li>
-  <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-</li>
-{{ end }}
+{{ partial "views/landing-page/index.gohtml" . }}
 
 {{ end }}

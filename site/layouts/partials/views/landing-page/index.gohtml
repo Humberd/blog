@@ -1,0 +1,9 @@
+<main class="landing-page">
+    <h1>Latest Articles</h1>
+
+    <div class="articles-list">
+        {{ range .Pages }}
+            {{ partial "views/landing-page/article-preview.gohtml" . }}
+        {{ end }}
+    </div>
+</main>

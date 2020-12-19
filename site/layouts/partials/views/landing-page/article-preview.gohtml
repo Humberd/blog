@@ -1,0 +1,19 @@
+<div class="article-preview">
+    {{ partial "views/landing-page/article-preview-banner.gohtml" . }}
+
+    <div class="timing">
+        <time datetime="{{ .Date.Unix }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        <span>·</span>
+        <span>{{ .ReadingTime }} min read</span>
+    </div>
+
+    <a href="{{ .Permalink }}">
+        <h2 class="title">{{.Title}}</h2>
+    </a>
+
+    <p>
+        {{ .Description }}
+    </p>
+
+    {{ partial "tags.gohtml" (.GetTerms "tags") }}
+</div>

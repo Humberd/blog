@@ -3,7 +3,10 @@ url: how-i-wrote-a-ps5-hunter-bot-in-7-hours
 title: How I wrote a PS5 hunter bot in 7 hours
 description: During a PlayStation 5 stock shortage I explained why and how I built a PS5 hunter bot looking for the availability change in the online stores
 images:
-    - res/_banner_.png
+    - res/_banner_.png  
+banners:
+    wide: res/_banner_.png
+    narrow: res/_banner_.png
 date: 2020-11-28
 tags:
     - javascript

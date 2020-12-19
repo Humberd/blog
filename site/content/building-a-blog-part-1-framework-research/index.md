@@ -4,6 +4,9 @@ title: Building a Blog - Part 1 Framework Research
 description: In the first article of the series I've researched frameworks I'm going to build my blog with.
 images:
     - res/_banner_.png
+banners:
+    wide: res/_banner_.png
+    narrow: res/_banner_.png
 date: 2020-11-14
 series:
     - Building a Blog
