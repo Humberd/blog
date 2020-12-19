@@ -1,0 +1,4 @@
+{{ $iconName := . }}
+{{ $filePath := printf "/resources/icons/%s.svg" $iconName }}
+{{ $file := $filePath | readFile }}
+{{ $file | safeHTML }}
