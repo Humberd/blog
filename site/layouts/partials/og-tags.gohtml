@@ -5,8 +5,8 @@
 />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}"/>
 <meta property="og:url" content="{{ .Permalink }}"/>
-{{ with $.Params.images }}
-    {{ range first 6 . -}}
+{{ with $.Params.banners }}
+    {{ with .narrow }}
         {{ $imageFound := $.Resources.GetMatch .}}
         {{ $link := $imageFound.Permalink }}
         {{ if getenv "CONTEXT" }}

@@ -3,8 +3,6 @@ url: angular-architecture-lazy-loaded-dialogs
 title: Angular Architecture - Lazy loaded dialogs
 description: How to efficiently handle lazy loading of a large amount of dialogs and how to structure an application around them.
 date: 2020-11-12
-images:
-    - res/_banner_.png
 banners:
     wide: res/_banner_.png
     narrow: res/_banner_.png

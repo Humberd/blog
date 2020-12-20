@@ -2,8 +2,6 @@
 url: how-to-statically-type-this-for-a-regular-function-in-typescript
 title: How to statically type 'this' for a regular function in TypeScript
 description: A cool trick to know when calling a regular function with a `call` or `apply` methods.
-images:
-    - res/_banner_.png
 banners:
     wide: res/_banner_.png
     narrow: res/_banner_.png
