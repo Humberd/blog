@@ -1,6 +1,7 @@
 import { PageViewEvent } from './events/page-view.event';
 import { BaseEvent } from './events/base.event';
 import { PageScrollEvent } from './events/page-scroll.event';
+import { getSessionId, getUserId, getViewId } from '../utils/id-generator';
 
 const ANALYTICS_URL = 'http://localhost:8080/xyz';
 
@@ -13,12 +14,21 @@ export class EventSender {
     return this.sendEvent('/page-scroll', event);
   }
 
-  private async sendEvent(path: string, event: BaseEvent) {
+  private async sendEvent<T>(path: string, event: T) {
+    const eventData: BaseEvent & T = {
+      userId: getUserId(),
+      sessionId: getSessionId(),
+      viewId: getViewId(),
+      referrer: document.referrer,
+      url: location.href,
+      ...event,
+    };
+
     return fetch(`${ANALYTICS_URL}${path}`, {
       method: 'POST',
-      body: JSON.stringify(event),
+      body: JSON.stringify(eventData),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
     });
   }

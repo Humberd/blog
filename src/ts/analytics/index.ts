@@ -1,14 +1,7 @@
 import { EventSender } from './event-sender';
-import { getUserId } from '../utils/id-generator';
 
 export function analyticsInit() {
   const eventSender = new EventSender();
-
-  eventSender.registerPageView({
-    userId: getUserId(),
-    referrer: document.referrer,
-    url: location.href,
-  });
 
   // we wait until all the images are loaded so that there is no scroll jumping
   setTimeout(() => {
@@ -37,9 +30,6 @@ function watchForScroll(breakpoints: number[], eventSender: EventSender): void {
     }
 
     eventSender.registerPageScroll({
-      userId: getUserId(),
-      referrer: document.referrer,
-      url: location.href,
       breakpoint: breakpoints[currentIndex],
     });
 

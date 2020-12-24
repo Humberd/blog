@@ -1,4 +1,4 @@
-import { analyticsInit } from './ts/analytics';
+import { analyticsInit } from './ts/analytics/index';
 
 console.log('hello from post');
 
