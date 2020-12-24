@@ -3,7 +3,14 @@
     "sourceMap": true,
     "target": "es2015",
     "module": "ES2020",
-    "allowJs": true
+    "allowJs": true,
+    "lib": [
+      "DOM",
+      "ES2020"
+    ]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "typeRoots": [
+    "./node_modules/@types"
+  ]
 }
