@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2015",
+    "module": "ES2020",
+    "allowJs": true
+  },
+  "include": ["src/**/*"]
+}
