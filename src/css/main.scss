@@ -1,13 +1,13 @@
 /*
   You can use import statements to include partials:
  */
-@import "vars.scss";
-@import 'imports/reset.css';
-@import 'imports/markdown.css';
-@import 'imports/content.scss';
-@import 'imports/inline-tags.scss';
-@import 'imports/main-header.scss';
-@import 'imports/main-footer.scss';
-@import 'imports/taxonomies.scss';
-@import 'views/langing-page.scss';
+@import "vars";
+@import 'src/css/imports/reset';
+@import 'src/css/imports/markdown';
+@import 'imports/content';
+@import 'imports/inline-tags';
+@import 'imports/main-header';
+@import 'imports/main-footer';
+@import 'imports/taxonomies';
+@import 'views/langing-page';
 

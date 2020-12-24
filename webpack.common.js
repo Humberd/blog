@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 
@@ -12,13 +12,17 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
   },
 
   module: {
     rules: [
       {
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader?name=/[hash].[ext]',
+        loader: 'file-loader',
+        options: {
+          name: '[hash].[ext]',
+        },
       },
 
       {test: /\.json$/, loader: 'json-loader'},
@@ -27,18 +31,27 @@ module.exports = {
         loader: 'ts-loader',
         test: /\.tsx?$/,
         exclude: /node_modules/,
+        options: {
+          configFile: 'tsconfig.prod.json',
+        },
       },
 
       {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          'style-loader', {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          }, 'css-loader', 'sass-loader'],
       },
     ],
   },
 
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
   },
 
   plugins: [
@@ -48,12 +61,13 @@ module.exports = {
       prettyPrint: true,
     }),
 
-    new CopyWebpackPlugin([
-      {
-        from: './src/fonts/',
-        to: 'fonts/',
-        flatten: true,
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/fonts/',
+          to: 'fonts/',
+        },
+      ],
+    }),
   ],
 };
