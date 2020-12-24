@@ -5,7 +5,7 @@ export function analyticsInit() {
   const eventSender = new EventSender();
 
   eventSender.registerPageView({
-    id: getUserId(),
+    userId: getUserId(),
     referrer: document.referrer,
     url: location.href,
   });
@@ -14,10 +14,10 @@ export function analyticsInit() {
   setTimeout(() => {
     const baseBreakpoints = [25, 50, 75, 90, 99];
     const initialScrollPercent = getScrollPercent();
-    const filteredBreakpoints = baseBreakpoints.filter(it => it >= initialScrollPercent)
+    const filteredBreakpoints = baseBreakpoints.filter(it => it >= initialScrollPercent);
 
-    watchForScroll(filteredBreakpoints, eventSender)
-  }, 1000)
+    watchForScroll(filteredBreakpoints, eventSender);
+  }, 1000);
 
 }
 
@@ -37,11 +37,11 @@ function watchForScroll(breakpoints: number[], eventSender: EventSender): void {
     }
 
     eventSender.registerPageScroll({
-      id: getUserId(),
+      userId: getUserId(),
       referrer: document.referrer,
       url: location.href,
-      breakpoint: breakpoints[currentIndex]
-    })
+      breakpoint: breakpoints[currentIndex],
+    });
 
     currentIndex++;
   };

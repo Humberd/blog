@@ -1,3 +1,3 @@
 export interface BaseEvent {
-  id: string;
+  userId: string;
 }

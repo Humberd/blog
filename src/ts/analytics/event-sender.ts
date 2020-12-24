@@ -16,7 +16,10 @@ export class EventSender {
   private async sendEvent(path: string, event: BaseEvent) {
     return fetch(`${ANALYTICS_URL}${path}`, {
       method: 'POST',
-      body: JSON.stringify(event)
+      body: JSON.stringify(event),
+      headers: {
+        'Content-Type': 'application/json'
+      },
     });
   }
 }
