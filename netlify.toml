@@ -7,3 +7,9 @@
 
 [context.deploy-preview]
   command = "npm run build:preview"
+
+[context.production.environment]
+  API_URL = "prod.url"
+
+[context.branch-deploy.environment]
+  API_URL = "dev.url"

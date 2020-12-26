@@ -1,5 +1,6 @@
 {{ define "main" }}
 hello from dev
+{{ getenv "API_URL" }}
 {{ partial "views/landing-page/index.gohtml" . }}
 
 {{ end }}
