@@ -23,6 +23,7 @@ export function getSessionId(): string {
   return randomId
 }
 
+
 const viewId = randomViewId();
 
 export function getViewId(): string {
