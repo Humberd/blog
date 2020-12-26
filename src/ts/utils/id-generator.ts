@@ -29,7 +29,6 @@ export function getViewId(): string {
   return viewId
 }
 
-
 function randomUserId(): string {
   return `u_${uuidv4()}`
 }
